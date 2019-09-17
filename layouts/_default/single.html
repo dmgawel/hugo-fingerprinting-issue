@@ -1,0 +1,7 @@
+{{ .Content }}
+
+<h2>Not-fingerprinted:</h2>
+<img src="{{ (.Page.Resources.GetMatch "image.svg").RelPermalink }}" width="300">
+
+<h2>Fingerprinted:</h2>
+<img src="{{ (.Page.Resources.GetMatch "image.svg" | resources.Fingerprint).RelPermalink }}" width="300">
